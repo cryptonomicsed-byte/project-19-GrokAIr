@@ -1,0 +1,76 @@
+{
+  "expo": {
+    "name": "GrokAIr",
+    "slug": "grokair",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTabletMode": false,
+      "bundleIdentifier": "com.grokair.app",
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "GrokAIr needs microphone access for voice chat and translation.",
+        "NSBluetoothPeripheralUsageDescription": "GrokAIr uses Bluetooth to discover nearby users for speed dating.",
+        "NSBluetoothAlwaysUsageDescription": "GrokAIr uses Bluetooth to discover nearby users for speed dating.",
+        "NSLocationWhenInUseUsageDescription": "Optional: location helps with local discovery.",
+        "UIUserInterfaceStyle": "Light"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.grokair.app",
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.BLUETOOTH",
+        "android.permission.BLUETOOTH_SCAN",
+        "android.permission.BLUETOOTH_ADVERTISE",
+        "android.permission.BLUETOOTH_CONNECT",
+        "android.permission.INTERNET",
+        "android.permission.ACCESS_NETWORK_STATE",
+        "android.permission.CAMERA"
+      ],
+      "usesPermission": [
+        {
+          "name": "android.permission.BLUETOOTH_SCAN",
+          "maxSdkVersion": 30
+        }
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-router",
+        {
+          "origin": "https://example.com"
+        }
+      ],
+      [
+        "expo-av",
+        {
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera."
+        }
+      ]
+    ],
+    "scheme": "grokair"
+  }
+}
